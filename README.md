@@ -23,27 +23,24 @@ The original fetal-state outcome was converted to a binary target:
 ## Selected results
 At the default 0.50 threshold, the model achieved about **90.1% accuracy** and **0.958 ROC AUC**. Lowering the threshold to 0.30 increased abnormal-class recall from **0.75 to 0.843**, illustrating the tradeoff between sensitivity and false positives.
 
+The saved metrics are available in `results/model_performance_metrics.csv`. The scripts generate the additional EDA and model visualizations locally when run.
+
 ## Repository structure
 ```text
 scripts/
   exploratory_analysis.py
   logistic_regression.py
 results/
-  correlation_heatmap.png
-  pca_scatter.png
-  top_feature_correlations.png
-  confusion_matrix.png
-  roc_curve.png
-  threshold_tuning.png
   model_performance_metrics.csv
 data/
   README.md
+requirements.txt
 ```
 
 ## Run locally
 1. Create a virtual environment.
 2. Install dependencies with `pip install -r requirements.txt`.
-3. Place `CTG.csv` in the project root.
+3. Place `CTG.csv` where the scripts expect it.
 4. Run the exploratory analysis and logistic-regression scripts.
 
 ## Portfolio note
